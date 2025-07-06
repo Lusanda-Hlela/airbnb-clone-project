@@ -129,3 +129,18 @@ All sensitive data, including passwords and payment details, will be encrypted i
 All API inputs will be validated and sanitized to prevent common attacks such as SQL injection and cross-site scripting (XSS). This helps maintain the integrity and security of the backend.
 
 By implementing these security measures, the platform ensures user trust, protects critical data, and maintains a secure environment for all interactions.
+
+
+## CI/CD Pipeline
+
+Continuous Integration and Continuous Deployment (CI/CD) pipelines are automated workflows that streamline the process of testing, building, and deploying code changes. In the context of the Airbnb Clone project, CI/CD ensures that every code update is automatically tested and deployed with minimal manual intervention, reducing errors and accelerating delivery.
+
+CI/CD is crucial for maintaining code quality, catching bugs early, and enabling rapid feature deployment. It supports team collaboration by providing instant feedback on changes and ensuring that only tested, production-ready code is deployed.
+
+### 🔧 Tools Used
+- **GitHub Actions**: Automates workflows such as running tests, building Docker containers, and deploying to production.
+- **Docker**: Ensures consistent environments across development, testing, and deployment stages.
+- **Docker Compose**: Manages multi-container applications during integration testing or local development.
+- **Heroku / AWS / Azure** *(optional)*: Cloud platforms that may be used for hosting and deploying the application.
+
+Together, these tools form a robust CI/CD pipeline that improves reliability, accelerates development, and ensures smoother deployments throughou
