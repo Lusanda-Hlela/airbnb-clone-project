@@ -10,6 +10,7 @@ Gain proficiency in designing and managing CI/CD pipelines for efficient deploym
 Strengthen my ability to document and plan complex software projects effectively.
 Develop an understanding of integrating technologies like Django, MySQL, and GraphQL in a unified ecosystem.
 
+
 ## Team Roles
 
 A project is a collaborative effort requiring various specialized roles:
@@ -35,3 +36,51 @@ The backend for the Airbnb Clone project utilizes a range of technologies to ens
 - **Redis**: An in-memory data structure store used to support caching and as a message broker for Celery tasks.
 - **Docker**: A containerization platform that ensures consistency across development, testing, and production environments.
 - **CI/CD Pipelines**: Automates testing, building, and deploying of code changes to reduce manual effort and improve deployment speed.
+
+
+## Database Design
+
+The database schema for the Airbnb Clone project is designed to manage users, properties, bookings, reviews, and payments efficiently. Below are the key entities and their important fields, along with their relationships:
+
+### 🧑 Users
+- `id`: Unique identifier for the user.
+- `name`: Full name of the user.
+- `email`: Email address (used for login).
+- `password`: Hashed password for authentication.
+- `user_type`: Identifies whether the user is a host or a guest.
+
+### 🏠 Properties
+- `id`: Unique identifier for the property.
+- `owner_id`: Foreign key linking to the User who owns the property.
+- `title`: Name or short description of the property.
+- `location`: City or region where the property is located.
+- `price_per_night`: Rental cost per night.
+
+### 📅 Bookings
+- `id`: Unique identifier for the booking.
+- `user_id`: Foreign key linking to the User who made the booking.
+- `property_id`: Foreign key linking to the booked Property.
+- `start_date`: Start date of the booking.
+- `end_date`: End date of the booking.
+
+### 💳 Payments
+- `id`: Unique identifier for the payment.
+- `booking_id`: Foreign key linking to the related Booking.
+- `amount`: Total payment amount.
+- `payment_status`: Status of the payment (e.g., pending, completed).
+- `payment_date`: Date the payment was processed.
+
+### 📝 Reviews
+- `id`: Unique identifier for the review.
+- `user_id`: Foreign key linking to the User who wrote the review.
+- `property_id`: Foreign key linking to the reviewed Property.
+- `rating`: Numeric rating (e.g., 1–5 stars).
+- `comment`: Textual feedback from the user.
+
+### 🔗 Relationships
+- A **User** can own multiple **Properties**.
+- A **User** can make multiple **Bookings**.
+- A **Property** can have many **Bookings** and **Reviews**.
+- Each **Booking** is linked to one **User** and one **Property**.
+- A **Payment** is associated with a **Booking**.
+- A **Review** is made by a **User** and linked to a **Property**.
