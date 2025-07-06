@@ -107,3 +107,25 @@ Allows guests to leave feedback and ratings for properties they've stayed in. He
 
 ### ⚙️ Data Optimization
 Implements indexing and caching to enhance performance. It ensures that data retrieval operations remain fast and efficient as the user base and listings grow.
+
+
+## API Security
+
+Securing the backend APIs of the Airbnb Clone project is critical to protecting user data, ensuring safe financial transactions, and maintaining the integrity of the system. The following key security measures will be implemented:
+
+### 🔐 Authentication
+User authentication will be enforced using secure methods such as token-based authentication (e.g., JWT). This ensures that only verified users can access protected resources and perform authorized actions on the platform.
+
+### 🛡️ Authorization
+Role-based access control (RBAC) will be used to manage permissions for different types of users (e.g., guest, host, admin). This prevents unauthorized access to sensitive operations, such as editing properties or viewing another user’s bookings.
+
+### 📊 Rate Limiting
+API rate limiting will be implemented to prevent abuse and mitigate denial-of-service (DoS) attacks. This ensures that no single user or client can overwhelm the system with excessive requests.
+
+### 🔒 Data Encryption
+All sensitive data, including passwords and payment details, will be encrypted in transit using HTTPS and in storage using hashing or encryption techniques. This protects user data from interception and leakage.
+
+### 🧪 Input Validation & Sanitization
+All API inputs will be validated and sanitized to prevent common attacks such as SQL injection and cross-site scripting (XSS). This helps maintain the integrity and security of the backend.
+
+By implementing these security measures, the platform ensures user trust, protects critical data, and maintains a secure environment for all interactions.
